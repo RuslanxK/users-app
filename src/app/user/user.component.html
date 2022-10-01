@@ -3,7 +3,7 @@
 
   <div class="markedDiv" (click)="markUser()" [ngStyle]="{'border-color':taskData == true ? 'green' : 'red'}">
 
-    <form #f="ngForm" id="userForm" (ngSubmit)="submit(buttonType)" [ngStyle]="{'background-color':markedUser == true ? 'blue' : 'white'}">
+    <form #f="ngForm" id="userForm" (ngSubmit)="submit(buttonType)">
 
       <div class="" *ngIf="!displayDiv">
 
