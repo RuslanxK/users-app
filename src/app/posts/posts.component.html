@@ -1,0 +1,12 @@
+<div class="postsDiv" *ngIf="!display">
+
+    <div>
+        
+        <button class="addPostBtn" (click)="addPost()">POST + </button>
+    </div>
+
+    <app-post [post]="post" (notify)="delete($event)" *ngFor="let post of user.posts"></app-post>
+
+</div>
+
+<app-addpost *ngIf="display" (notify)="showPosts($event)"></app-addpost>

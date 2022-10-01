@@ -1,0 +1,28 @@
+<div class="addPostDiv" *ngIf="!hidePosts">
+
+  <form #f="ngForm" id="addPostForm" (ngSubmit)="submit(buttonType)">
+
+
+
+    <label for="name" id="titlePostLabel" class="titlePost">Title</label>
+    <input type="text" class="" id="titlePost" minlength="1" maxlength="30" name="title" [(ngModel)]="post.title">
+
+
+
+
+
+    <label for="name" id="bodyPostLabel" class="bodyPost">Body</label>
+    <textarea class="" cols="10" rows="3" id="body" name="body" minlength="1" maxlength="60"
+      [(ngModel)]="post.body"> </textarea>
+
+
+
+    <div class="addPostBtnsDiv">
+
+      <button class="addBtn" type="submit" (click)="submit('addPost')">Add</button>
+      <button class="backBtn" type="submit" (click)="submit('back')">Back</button>
+    </div>
+
+  </form>
+
+</div>

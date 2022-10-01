@@ -1,1 +1,442 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #abc4ff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.usersDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.userDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+}
+
+.users-div {
+  background-color: #ebeaef;
+  overflow-y: auto;
+  text-align: justify;
+  height: 555px;
+  padding-bottom: 20px;
+}
+
+.markedDiv {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 600px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid red;
+  background-color: white;
+}
+
+.markedDiv:hover {
+  transform: scale(1.05);
+}
+
+.leftDiv {
+  background-color: #ffffff;
+  width: 45vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightDiv {
+  width: 45vw;
+  height: 95vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchInput {
+  width: 580px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 150px;
+}
+
+#userBtn {
+  padding: 10px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+}
+
+#userBtn-update {
+  padding: 10px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+}
+
+#userBtn-delete {
+  padding: 10px;
+  background-color: #03045e;
+  color: white;
+  border: none;
+}
+
+#userForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 800px;
+  align-items: center;
+  background-color: white;
+  height: 85px;
+}
+
+#otherData {
+  background-color: #0077b6;
+  height: 90px;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#userBtn-hide {
+  background-color: #00b4d8;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+#buttonsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 225px;
+}
+
+.postsDiv {
+  background-color: #ebeaef;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 600px;
+  height: 330px;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.postDiv {
+  background-color: #5793f3;
+  width: 530px;
+  color: white;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.postDiv:hover {
+  transform: scale(1.03);
+}
+
+.todosDiv {
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  background-color: #ebeaef;
+  justify-content: center;
+  align-items: flex-start;
+  width: 600px;
+  height: 335px;
+  overflow-y: auto;
+  text-align: justify;
+  padding: 10px;
+}
+
+.todoDiv {
+  margin: 5px;
+  height: 150px;
+  transition: all 0.2s ease-in-out;
+}
+
+.todoDiv:hover {
+  transform: scale(1.03);
+}
+
+.addTaskBtn {
+  margin: 5px;
+  height: 150px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background-color: #5793f3;
+}
+
+.addTaskBtn:hover {
+  background-color: #74a2ec;
+}
+
+.addPostBtn {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 530px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  margin-top: 15px;
+}
+
+.addPostBtn:hover {
+  background-color: #0d8cd0;
+}
+
+.adduserDiv {
+  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addTaskDiv {
+  background-color: #ebeaef;
+  display: flex;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+}
+
+#addtaskFrom {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+}
+
+.titleTodo {
+  width: 170px;
+  margin: 10px;
+}
+
+#titlePost {
+  width: 200px;
+}
+
+#body {
+  width: 200px;
+}
+
+.titleTask,
+.titlePost,
+.bodyPost {
+  font-size: 1.2rem;
+}
+
+.addBtn,
+.backBtn {
+  width: 50px;
+  background-color: #5793f3;
+  color: white;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin: 3px;
+}
+
+.addPostDiv {
+  width: 600px;
+  height: 330px;
+  background-color: #ebeaef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#addPostForm {
+  height: 280px;
+  width: 320px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.deleteBtn {
+  background-color: #00b4d8;
+}
+
+#taskTitle {
+  font-weight: bold;
+}
+
+.completedBtn {
+  background-color: #5793f3;
+  color: white;
+  border: none;
+  padding: 8px;
+}
+
+#deleteTodoDiv {
+  width: 160px;
+  height: 25px;
+  display: flex;
+  align-self: flex-end;
+}
+
+#deletePostDiv {
+  width: 500px;
+  display: flex;
+  justify-self: flex-start;
+}
+
+#deleteTodoBtn {
+  background: none;
+  border: none;
+}
+
+.deletePostBtn {
+  padding-top: 20px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+#titlePostLabel {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#bodyPostLabel {
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.addUserBtn {
+  padding: 15px;
+  margin-right: 2px;
+  background-color: #5793f3;
+  color: white;
+  border: none;
+}
+
+.addUserBtn:hover {
+  background-color: #74a2ec;
+}
+
+.pdiv {
+  margin-top: 13px;
+}
+
+.adduserDiv {
+  background-color: #ebeaef;
+  border: none;
+}
+
+.addPostBtnsDiv {
+  margin-top: 5px;
+  width: 200px;
+}
+
+.addUserForm {
+  background-color: white;
+  width: 320px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addUserName,
+.addUserEmail {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.labelName,
+.labelEmail {
+  font-size: 1.1rem;
+  width: 200px;
+}
+
+.addUserBtnDiv {
+  width: 200px;
+}
+
+.addUserBtnForm {
+  margin-right: 5px;
+  background-color: #5793f3;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  border: none;
+}
+
+#userMessageSpan {
+
+   color: red;
+}

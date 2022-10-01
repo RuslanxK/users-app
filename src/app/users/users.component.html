@@ -1,0 +1,34 @@
+<div class="usersDiv">
+
+    <div class="leftDiv">
+
+        <div class="search">
+
+            <button class="addUserBtn" (click)="addUser()">User +</button>
+
+            <form class="">
+
+                <input #userData id="searchInput" placeholder="Search by name or email"
+                    (keyup)="search(userData.value)">
+
+            </form>
+
+        </div>
+
+        <div class="users-div">
+
+            <app-user [userId]="user._id" *ngFor="let user of filteredData"></app-user>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="rightDiv">
+
+        <router-outlet></router-outlet>
+
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="todoDiv">
+
+    <div id="deleteTodoDiv">
+        <button id="deleteTodoBtn" (click)="sendToParent()">&#10006;</button>
+    </div>
+
+    <span id="taskTitle">{{task.title}}</span>
+    <span>
+        Completed:<p [ngStyle]="{'color':completed == true ? 'red' : 'green' }">{{task.completed}} </p>
+    </span>
+
+    <button *ngIf="completed" (click)="markCompleted()" class="completedBtn">Mark Completed</button>
+
+
+</div>

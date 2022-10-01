@@ -1,0 +1,26 @@
+<div class="adduserDiv">
+
+  <form #f="ngForm" (ngSubmit)="submit()" class="addUserForm">
+
+
+    <span *ngIf="userRequiredMessage" id="userMessageSpan">Name and Email required!</span>
+    <br>
+
+    <label for="name" class="labelName">Name</label>
+    <input type="text" class="addUserName" id="name" name="name" [(ngModel)]="newUser.name">
+
+
+    <label for="email" class="labelEmail">Email</label>
+    <input type="email" class="addUserEmail" id="email" name="email" [(ngModel)]="newUser.email">
+
+
+    <div class="addUserBtnDiv">
+
+      <button type="submit" class="addUserBtnForm">Add</button>
+      <button (click)="cancel()" class="addUserBtnForm">Back</button>
+
+    </div>
+
+  </form>
+
+</div>

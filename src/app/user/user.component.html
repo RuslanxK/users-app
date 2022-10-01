@@ -1,0 +1,66 @@
+<div class="userDiv"> <br />
+
+
+  <div class="markedDiv" (click)="markUser()" [ngStyle]="{'border-color':taskData == true ? 'green' : 'red'}">
+
+    <form #f="ngForm" id="userForm" (ngSubmit)="submit(buttonType)" [ngStyle]="{'background-color':markedUser == true ? 'blue' : 'white'}">
+
+      <div class="" *ngIf="!displayDiv">
+
+        <input type="text" class="" id="name" name="name" placeholder="name" [(ngModel)]="user.name">
+
+      </div>
+
+      <div class="" *ngIf="!displayDiv">
+
+        <input type="text" class="" id="email" name="email" placeholder="email" [(ngModel)]="user.email">
+
+      </div>
+
+
+
+    
+
+
+
+      <div id="otherData" *ngIf="displayDiv">
+
+        <div class="">
+
+          <input type="text" class="" id="steet" name="street" placeholder="street" [(ngModel)]="user.street">
+
+        </div>
+
+        <div class="">
+
+          <input type="text" class="" id="city" name="City" placeholder="city" [(ngModel)]="user.city">
+
+        </div>
+
+        <div class="">
+
+          <input type="text" class="" id="zipcode" name="zipcode" placeholder="zipcode" [(ngModel)]="user.zipcode">
+
+        </div>
+
+        <button *ngIf="displayDiv" id="userBtn-hide" (click)="displayDiv=false">Hide
+        </button>
+
+      </div>
+
+
+      <div id="buttonsDiv" class="" *ngIf="!displayDiv">
+
+        <button (click)="displayDiv=true" id="userBtn">Other Data
+        </button>
+
+
+        <button type="submit" id="userBtn-update" (click)="submit('update')">Update</button>
+        <button type="submit" id="userBtn-delete" (click)="submit('delete')">Delete</button>
+
+      </div>
+
+    </form>
+
+
+  </div>
